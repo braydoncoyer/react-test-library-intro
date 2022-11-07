@@ -8,7 +8,8 @@ function App() {
 
   function handleOnSubmit(event) {
     event.preventDefault();
-    setShowSuccessMessage(true);
+    setShowSuccessMessage(!!address);
+    setAddress('');
   }
 
   function handleChange(event) {
@@ -21,7 +22,7 @@ function App() {
         React Testing Library Introduction
       </h1>
       <div className="border rounded-lg p-6 my-4 w-full border-gray-700 bg-[#1E293B] text-gray-400">
-        <h3 className="flex items-center mt-2 font-bold md:text-2xl text-gray-100">
+        <h3 className="flex items-center mt-2 font-bold text-gray-100 md:text-2xl">
           Join my newsletter!
         </h3>
 
@@ -42,7 +43,7 @@ function App() {
             onChange={handleChange}
             autoComplete="email"
             required
-            className="w-full px-4 bg-white rounded-lg py-3 focus:ring-gray-100 border-gray-400 text-slate-800 placeholder:text-slate-500"
+            className="w-full px-4 py-3 bg-white border-gray-400 rounded-lg focus:ring-gray-100 text-slate-800 placeholder:text-slate-500"
           />
           <button
             className="py-0.5 md:py-1 items-center justify-center px-4 bg-indigo-500 hover:bg-indigo-400 text-white rounded-xl"
@@ -52,7 +53,7 @@ function App() {
           </button>
         </form>
         {showSuccessMessage ? (
-          <span className="text-teal-500 font-bold">You're subscribed!</span>
+          <span className="font-bold text-teal-500">You're subscribed!</span>
         ) : null}
       </div>
     </div>
