@@ -18,7 +18,7 @@ function App() {
   
   return (
     <div className="bg-[#101827] min-h-screen grid place-content-center relative">
-      <h1 className="text-7xl font-bold absolute top-[200px] left-[200px] text-slate-800/50">
+      <h1 className="text-7xl font-bold absolute top-[200px] left-[200px] text-slate-700/60">
         React Testing Library Introduction
       </h1>
       <div className="border rounded-lg p-6 my-4 w-full border-gray-700 bg-[#1E293B] text-gray-400">
